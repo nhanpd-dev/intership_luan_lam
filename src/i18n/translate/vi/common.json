@@ -1,4 +1,7 @@
 {
-    "name": "Ten",
-    "login": "Đăng nhập"
+  "name": "Tên",
+  "login": "Đăng nhập",
+  "register": "Đăng ký",
+  "password": "Mật khẩu",
+  "email": "Thư điện tử"
 }

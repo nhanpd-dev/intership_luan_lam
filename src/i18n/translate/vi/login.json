@@ -1,0 +1,10 @@
+{
+  "enter_email": "Nhập email vào...",
+  "enter_password": "Nhập mật khẩu vào...",
+  "register_now": "đăng ký ngay",
+  "field_required": "Trường này là bắt buộc",
+  "right_email": "Cần nhập đúng định dạng email",
+  "max_length": "Số ký tự tối đa là: {{max}}",
+  "min_length": "Số ký tự tối thiểu là: {{min}}",
+  "no_account": "Chưa có tài khoản? "
+}
