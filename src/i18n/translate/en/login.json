@@ -1,0 +1,12 @@
+{
+  "enter_email": "Enter email...",
+  "enter_password": "Enter password...",
+  "register_now": "register now",
+  "no_account": "No account yet? ",
+  "validation": {
+    "field_required": "This field is required",
+    "right_email": "Enter true form of email",
+    "max_length": "Max length is: {{max}}",
+    "min_length": "Min length is: {{min}}"
+  }
+}
