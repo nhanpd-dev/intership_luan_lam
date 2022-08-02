@@ -1,4 +1,14 @@
 {
     "name": "Name",
-    "login": "Login"
+    "login": "Login",
+    "register": "Register",
+    "password": "Password",
+    "enter_email": "Enter email",
+    "enter_password": "Enter password",
+    "register_now": "register now",
+    "field_required" : "This field is required",
+    "right_email" : "Enter true form of email",
+    "max_length" : "Max length is: ",
+    "min_length" : "Min length is: "
+
 }
