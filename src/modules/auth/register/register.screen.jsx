@@ -25,7 +25,7 @@ function RegisterScreen() {
       phone: "",
       password: "",
     },
-    resolver: yupResolver(schema),
+    resolver: yupResolver(schema(t)),
   });
   const onSubmitHandler = (data) => {
     console.log({ data });
@@ -34,10 +34,10 @@ function RegisterScreen() {
 
   return (
     <Container>
-      <h2>{t("signup", { ns: "register" })}</h2>
+      <h2 className="title">{t("signup")}</h2>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
         <FormItem>
-          <label>{t("Name")}</label>
+          <label>{t("name")}</label>
           <input
             {...register("full_name")}
             // placeholder="nhap ho ten"
@@ -49,10 +49,10 @@ function RegisterScreen() {
 
         <FormItem>
           <div className="group-button">
-            <label>{t("Sex")}</label>
+            <label>{t("sex")}</label>
 
             <label>
-              {t("Female")}
+              {t("female")}
               <input
                 className="radio-button-0"
                 {...register("sex")}
@@ -64,7 +64,7 @@ function RegisterScreen() {
             </label>
 
             <label>
-              {t("Nemale")}
+              {t("male")}
               <input
                 className="radio-button-1"
                 {...register("sex")}
@@ -79,7 +79,7 @@ function RegisterScreen() {
         <p>{errors.sex?.message}</p>
 
         <FormItem>
-          <label> {t("Date")}</label>
+          <label> {t("date")}</label>
 
           <input {...register("date")} type="date" name="date" />
         </FormItem>
@@ -93,20 +93,20 @@ function RegisterScreen() {
         <p>{errors.email?.message}</p>
 
         <FormItem>
-          <label> {t("Phone")}</label>
+          <label> {t("phone")}</label>
 
           <input {...register("phone")} type="tel" name="phone" />
         </FormItem>
         <p>{errors.phone?.message}</p>
 
         <FormItem>
-          <label> {t("Password")}</label>
+          <label> {t("password")}</label>
 
           <input {...register("password")} type="password" name="password" />
         </FormItem>
         <p>{errors.password?.message}</p>
         <button type="submit" className="submit-button">
-          {t("Sign Up")}
+          {t("signup")}
         </button>
         <FormItem>
           <div className="link">

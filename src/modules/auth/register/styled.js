@@ -10,11 +10,11 @@ const Container = styled.div`
 
   width: 800px;
 
-  h2 {
+  .title {
     text-align: center;
     font-weight: 900;
   }
-  p {
+  .errors-message {
     margin-left: 152px;
     color: Red;
     font-size: 16px;

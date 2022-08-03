@@ -9,7 +9,7 @@ const schema = (t) => {
       .min(6, t("name_err_min"))
       .max(30, t("name_err_max"))
       .required(t("name__required")),
-    sex: yup.string().required("Hãy chọn giới tính"),
+    sex: yup.string().required(t("sex")),
 
     email: yup
       .string()
