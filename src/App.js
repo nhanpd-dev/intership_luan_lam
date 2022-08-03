@@ -1,8 +1,8 @@
 import React from "react";
-import RegisterScreen from "./modules/auth/register/register.screen";
+import AppRoutes from "./routes";
 
 function App() {
-  return <RegisterScreen />;
+  return <AppRoutes />;
 }
 
 export default App;
