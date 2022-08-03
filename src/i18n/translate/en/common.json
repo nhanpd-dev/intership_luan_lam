@@ -1,4 +1,11 @@
 {
-    "name": "Name",
-    "login": "Login"
+  "name": "Name",
+  "login": "Login",
+  "sex": "Sex",
+  "male": "Male",
+  "female": "Female",
+  "date": "date",
+  "email": "Email",
+  "phone": "Phone",
+  "password": "Password"
 }

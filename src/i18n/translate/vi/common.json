@@ -1,4 +1,11 @@
 {
-    "name": "Ten",
-    "login": "Đăng nhập"
+  "name": "Họ tên",
+  "login": "Đăng nhập",
+  "sex": "Giới tính",
+  "male": "Nam",
+  "female": "Nữ",
+  "date": "Ngày sinh",
+  "email": "Email",
+  "phone": "Điện thoại",
+  "password": "Mật khẩu"
 }
