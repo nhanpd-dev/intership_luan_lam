@@ -7,13 +7,13 @@ const Container = styled.div`
   overflow: hidden;
   border-radius: 25px;
   background-color: ${COLORS.secondary};
-
   width: 800px;
 
   .title {
     text-align: center;
     font-weight: 900;
   }
+
   .errors-message {
     margin-left: 152px;
     color: Red;
@@ -46,13 +46,13 @@ const FormItem = styled.div`
   margin-right: 80px;
   margin-top: 10px;
 
-//   background-color: coral;
     .group-button {
         display: flex;
         label {
             min-width: 100px;
         }
     }
+
   label {
     min-width: 100px;
     margin-right: 15px;
@@ -61,7 +61,6 @@ const FormItem = styled.div`
     font-weight: 400;
     line-height: 120%;
     pading-top:10px;
-
     }
 
     input {
@@ -71,13 +70,14 @@ const FormItem = styled.div`
     }
 
   }
+
   .link {
     margin: 0;
     text-align: center;
     width: 100%;
     height: 20px;
 
-    a {
+    .link-ref {
         color: White;
     }
   }

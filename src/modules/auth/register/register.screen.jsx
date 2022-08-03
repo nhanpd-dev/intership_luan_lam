@@ -111,7 +111,7 @@ function RegisterScreen() {
         <FormItem>
           <div className="link">
             {t("already_account")}
-            <a>{t("login_now")}</a>
+            <a className="link-ref">{t("login_now")}</a>
           </div>
         </FormItem>
       </form>
