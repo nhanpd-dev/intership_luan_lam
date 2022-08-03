@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import COLORS from "../../../themes/colors";
-// import { FONTS_SIZE } from "../../../../themes/fonts";
+
 const Container = styled.div`
   font-family: sans-serif;
   margin: 0 auto;
@@ -25,10 +25,8 @@ const Container = styled.div`
     outline: none;
     border-radius: 4px;
     background-color: ${COLORS.primary};
-
     padding: 13px 0px;
     width: 100%;
-    // color: rgb(255, 255, 255);
     border: none;
     font-size: 20px;
     cursor: pointer;
@@ -53,19 +51,17 @@ const FormItem = styled.div`
         }
     }
 
-  label {
+  .label-item {
     min-width: 100px;
     margin-right: 15px;
-    color: #blue;
     font-size: 20px;
     font-weight: 400;
     line-height: 120%;
     pading-top:10px;
     }
 
-    input {
+    .input-item {
       flex: 1;
-      background-color: #blu;
       border-radius: 1px solid 5px;
     }
 
@@ -78,7 +74,7 @@ const FormItem = styled.div`
     height: 20px;
 
     .link-ref {
-        color: White;
+        color: #FFFFFF;
     }
   }
 

@@ -37,74 +37,116 @@ function RegisterScreen() {
       <h2 className="title">{t("signup")}</h2>
       <form onSubmit={handleSubmit(onSubmitHandler)}>
         <FormItem>
-          <label>{t("name")}</label>
+          <label htmlFor="full_name" className="label-item">
+            {t("name")}
+          </label>
+
           <input
-            {...register("full_name")}
-            // placeholder="nhap ho ten"
+            className="input-item"
+            id="full_name"
             name="full_name"
             required
+            {...register("full_name")}
           />
         </FormItem>
         <p className="errors-message">{errors.full_name?.message}</p>
 
         <FormItem>
           <div className="group-button">
-            <label>{t("sex")}</label>
+            <label className="label-item">{t("sex")}</label>
 
-            <label>
+            <label htmlFor="female" className="label-item">
               {t("female")}
+
               <input
-                className="radio-button-0"
-                {...register("sex")}
+                className="input-item"
                 type="radio"
                 value="0"
                 required
                 name="sex"
-              ></input>
+                id="female"
+                {...register("sex")}
+              />
             </label>
 
-            <label>
+            <label htmlFor="male" className="label-item">
               {t("male")}
+
               <input
-                className="radio-button-1"
-                {...register("sex")}
+                className="input-item"
                 type="radio"
                 value="1"
                 required
                 name="sex"
-              ></input>
+                id="male"
+                {...register("sex")}
+              />
             </label>
           </div>
         </FormItem>
-        <p>{errors.sex?.message}</p>
+        <p className="errors-message">{errors.sex?.message}</p>
 
         <FormItem>
-          <label> {t("date")}</label>
+          <label htmlFor="date" className="label-item">
+            {" "}
+            {t("date")}
+          </label>
 
-          <input {...register("date")} type="date" name="date" />
+          <input
+            className="input-item"
+            type="date"
+            name="date"
+            id="date"
+            {...register("date")}
+          />
         </FormItem>
-        <p>{errors.date?.message}</p>
+        <p className="errors-message">{errors.date?.message}</p>
 
         <FormItem>
-          <label>{t("email")}</label>
+          <label htmlFor="email" className="label-item">
+            {t("email")}
+          </label>
 
-          <input {...register("email")} type="email" name="email" />
+          <input
+            className="input-item"
+            type="email"
+            name="email"
+            id="email"
+            {...register("email")}
+          />
         </FormItem>
-        <p>{errors.email?.message}</p>
+        <p className="errors-message">{errors.email?.message}</p>
 
         <FormItem>
-          <label> {t("phone")}</label>
+          <label htmlFor="phone" className="label-item">
+            {t("phone")}
+          </label>
 
-          <input {...register("phone")} type="tel" name="phone" />
+          <input
+            className="input-item"
+            type="tel"
+            name="phone"
+            id="phone"
+            {...register("phone")}
+          />
         </FormItem>
-        <p>{errors.phone?.message}</p>
+        <p className="errors-message">{errors.phone?.message}</p>
 
         <FormItem>
-          <label> {t("password")}</label>
+          <label htmlFor="password" className="label-item">
+            {t("password")}
+          </label>
 
-          <input {...register("password")} type="password" name="password" />
+          <input
+            className="input-item"
+            type="password"
+            name="password"
+            id="pasword"
+            {...register("password")}
+          />
         </FormItem>
-        <p>{errors.password?.message}</p>
+        <p className="errors-message">{errors.password?.message}</p>
+
         <button type="submit" className="submit-button">
           {t("signup")}
         </button>
