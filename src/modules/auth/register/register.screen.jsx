@@ -3,10 +3,12 @@ import { useTranslation } from "react-i18next";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import { useForm } from "react-hook-form";
-import { useNavigate } from "react-router-dom";
-import schema from "./schema";
-import { Container, FormItem, Background } from "./styled";
+import { useNavigate, Link } from "react-router-dom";
 
+import schema from "./schema";
+import { Container, FormItem, Background, Img } from "./styled";
+import shoping from "../../../assets/img/shoping.jpg";
+import dowload from "../../../assets/img/dowload.png";
 function RegisterScreen() {
   const { t } = useTranslation(["register", "common"]);
   const navigate = useNavigate();
@@ -33,6 +35,9 @@ function RegisterScreen() {
 
   return (
     <Background>
+      <Img>
+        <img className="img-register" src={shoping} />
+      </Img>
       <Container>
         <h1 className="title">{t("common:signup")}</h1>
         <form onSubmit={handleSubmit(onSubmitHandler)}>
@@ -45,6 +50,7 @@ function RegisterScreen() {
               className="input-item"
               id="full_name"
               name="full_name"
+              type="text"
               required
               {...register("full_name")}
             />
@@ -52,40 +58,18 @@ function RegisterScreen() {
           <p className="errors-message">{errors.full_name?.message}</p>
 
           <FormItem>
-            <div className="group-button">
-              <label className="label-item">{t("common:sex")}</label>
-
-              <label htmlFor="female" className="label-item">
-                {t("common:female")}
-
-                <input
-                  className="input-item radio-item"
-                  type="radio"
-                  value="0"
-                  required
-                  name="sex"
-                  id="female"
-                  {...register("sex")}
-                />
-              </label>
-
-              <label htmlFor="male" className="label-item ">
-                {t("common:male")}
-
-                <input
-                  className="input-item radio-item"
-                  type="radio"
-                  value="1"
-                  required
-                  name="sex"
-                  id="male"
-                  {...register("sex")}
-                />
-              </label>
-            </div>
+            <label className="label-item">{t("common:sex")}</label>
+            <select
+              id="country"
+              name="country"
+              className="input-item select-form"
+              {...register("sex")}
+            >
+              <option value="1"> {t("common:male")}</option>
+              <option value="0"> {t("common:female")}</option>
+            </select>
           </FormItem>
           <p className="errors-message">{errors.sex?.message}</p>
-
           <FormItem>
             <label htmlFor="date" className="label-item">
               {t("common:date")}
@@ -152,14 +136,9 @@ function RegisterScreen() {
           <FormItem>
             <div className="link">
               {t("already_account")}
-              <a
-                className="link-ref"
-                onClick={() => {
-                  navigate("/login");
-                }}
-              >
+              <Link className="link-ref" to="/login">
                 {t("login_now")}
-              </a>
+              </Link>
             </div>
           </FormItem>
         </form>

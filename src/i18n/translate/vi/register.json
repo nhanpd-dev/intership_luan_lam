@@ -1,6 +1,6 @@
 {
   "login_now": "Đăng nhập ngay",
-  "already_account": "Đã có tài khoản",
+  "already_account": "Đã có tài khoản?",
 
   "validation": {
     "name_err_min": "Tối thiểu 6 kí tự",
